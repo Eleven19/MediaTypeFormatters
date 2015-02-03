@@ -13,6 +13,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".solution", ".solution", "{
 	ProjectSection(SolutionItems) = preProject
 		.gitattributes = .gitattributes
 		.gitignore = .gitignore
+		ReadMe.md = ReadMe.md
 	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Eleven19.Net.Http.Formatting.Csv", "src\Eleven19.Net.Http.Formatting.Csv\Eleven19.Net.Http.Formatting.Csv.csproj", "{7C87D137-B5A7-404F-8665-5808A06F9765}"
