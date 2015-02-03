@@ -1,3 +1,6 @@
 ﻿Microsoft.AspNet.WebApi.Client
 Microsoft.AspNet.WebApi.Core
 CsvHelper
+Xbehave
+FluentAssertions
+FakeItEasy

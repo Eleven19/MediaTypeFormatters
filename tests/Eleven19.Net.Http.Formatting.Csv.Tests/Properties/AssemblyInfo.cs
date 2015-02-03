@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("Eleven19.CsvMediaTypeFormatter")]
+[assembly: AssemblyTitle("Eleven19.Net.Http.Formatting.Csv.Tests")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("Eleven19.CsvMediaTypeFormatter")]
+[assembly: AssemblyProduct("Eleven19.Net.Http.Formatting.Csv.Tests")]
 [assembly: AssemblyCopyright("Copyright ©  2015")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("27bd0e5d-df81-4c8f-af0a-c98f4a592e8b")]
+[assembly: Guid("8c05b9e0-5dae-497f-945c-69a51923bd01")]
 
 // Version information for an assembly consists of the following four values:
 //
@@ -34,4 +34,3 @@ using System.Runtime.InteropServices;
 // [assembly: AssemblyVersion("1.0.*")]
 [assembly: AssemblyVersion("1.0.0.0")]
 [assembly: AssemblyFileVersion("1.0.0.0")]
-[assembly:InternalsVisibleTo("Eleven19.Net.Http.Formatting.Csv.Tests")]

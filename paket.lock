@@ -2,6 +2,9 @@ NUGET
   remote: https://nuget.org/api/v2
   specs:
     CsvHelper (2.10.0)
+    FAKE (3.14.9)
+    FakeItEasy (1.25.2)
+    FluentAssertions (3.2.2)
     Microsoft.AspNet.WebApi.Client (5.2.2)
       Microsoft.Net.Http (>= 2.2.22)
       Newtonsoft.Json (>= 6.0.4)
@@ -14,3 +17,9 @@ NUGET
       Microsoft.Bcl (>= 1.1.9)
       Microsoft.Bcl.Build (>= 1.0.14)
     Newtonsoft.Json (6.0.8)
+    Xbehave (1.1)
+      xunit (1.9.2)
+      xunit.extensions (1.9.2)
+    xunit (1.9.2)
+    xunit.extensions (1.9.2)
+      xunit (1.9.2)
