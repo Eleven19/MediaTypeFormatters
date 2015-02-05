@@ -15,7 +15,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".solution", ".solution", "{
 		.gitignore = .gitignore
 		build.cmd = build.cmd
 		build.fsx = build.fsx
+		nuget\Eleven19.Net.Http.Formatting.Csv.nuspec = nuget\Eleven19.Net.Http.Formatting.Csv.nuspec
 		ReadMe.md = ReadMe.md
+		RELEASE_NOTES.md = RELEASE_NOTES.md
 	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Eleven19.Net.Http.Formatting.Csv", "src\Eleven19.Net.Http.Formatting.Csv\Eleven19.Net.Http.Formatting.Csv.csproj", "{7C87D137-B5A7-404F-8665-5808A06F9765}"
