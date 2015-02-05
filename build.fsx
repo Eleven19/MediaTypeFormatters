@@ -74,7 +74,12 @@ let (|Bool|_|) str =
     | _ -> None
 
 // Read additional information from the release notes document
-let release = LoadReleaseNotes "RELEASE_NOTES.md"
+let release = 
+    let notes = LoadReleaseNotes "RELEASE_NOTES.md"    
+    match buildServer with
+    | AppVeyor -> ReleaseNotes.New(appVeyorBuildVersion, appVeyorBuildVersion, notes.Notes)
+    | _ -> notes
+    
 let runTests = true
 let shouldGenerateDocs =     
     let result = environVarOrDefault "GenerateDocs" "false"

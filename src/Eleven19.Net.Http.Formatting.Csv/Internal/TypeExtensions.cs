@@ -32,6 +32,17 @@ namespace Eleven19.Net.Http.Formatting.Internal
             });
         }
 
+        public static bool TryGetElementType(this Type @this, out Type elementType)
+        {
+            if (!@this.IsClosedTypeOf(typeof (IEnumerable<>)))
+            {
+                elementType = null;
+                return false;
+            }
+            elementType = @this.GetGenericArguments()[0];
+            return true;
+        }
+
         private static IEnumerable<Type> FindAssignableTypesThatClose(Type candidateType, Type openGenericServiceType)
         {
             return TypesAssignableFrom(candidateType).Where(t => IsClosedTypeOf(t, openGenericServiceType));

@@ -50,10 +50,17 @@ namespace Eleven19.Net.Http.Formatting
             var queryStrings = request.RequestUri.ParseQueryString();
             var filename = GetFilename(request, queryStrings);
             var delimiterOverride = GetDelimiter(request, queryStrings);
+            Type elementType;
+            CsvConfiguration config = null;
+            if (type.TryGetElementType(out elementType))
+            {
+                config = Configuration.GetConfigurationFor(elementType);
+            }            
             return new PerInstanceCsvMediaTypeFormatter
             {
                 Filename = filename,
-                DelimiterOverride = delimiterOverride
+                DelimiterOverride = delimiterOverride,
+                CsvConfiguration = config
             };
         }
 
