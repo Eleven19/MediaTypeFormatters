@@ -19,7 +19,7 @@
     <dependencies />
   </metadata>
   <files>
-    <file src="..\deployables\Eleven19.Net.Http.Formatting.Csv.dll" target="lib/net45" />
-    <file src="..\deployables\Eleven19.Net.Http.Formatting.Csv.pdb" target="lib/net45" />
+    <file src="..\deployables\Eleven19.Net.Http.Formatting.Csv\Eleven19.Net.Http.Formatting.Csv.dll" target="lib/net45" />
+    <file src="..\deployables\Eleven19.Net.Http.Formatting.Csv\Eleven19.Net.Http.Formatting.Csv.pdb" target="lib/net45" />
   </files>
 </package>
