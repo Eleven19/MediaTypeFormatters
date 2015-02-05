@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections;
+using System.Collections.Concurrent;
 using System.Collections.Generic;
 using System.Collections.Specialized;
 using System.IO;
@@ -15,10 +16,24 @@ namespace Eleven19.Net.Http.Formatting
 {
     public class CsvMediaTypeFormatter : BufferedMediaTypeFormatter
     {
-        public CsvMediaTypeFormatter()
+        private readonly ICsvMediaTypeFormatterConfiguration _configuration;
+
+        public CsvMediaTypeFormatter():this(new CsvMediaTypeFormatterConfiguration())
         {
-            SupportedMediaTypes.Add(new MediaTypeHeaderValue("text/csv"));
         }
+
+        public CsvMediaTypeFormatter(ICsvMediaTypeFormatterConfiguration configuration)
+        {
+            if (configuration == null) throw new ArgumentNullException("configuration");
+            SupportedMediaTypes.Add(new MediaTypeHeaderValue("text/csv"));
+            _configuration = configuration;
+        }
+
+        public ICsvMediaTypeFormatterConfiguration Configuration
+        {
+            get { return _configuration; }
+        }
+
         public override bool CanReadType(Type type)
         {
             return false;
@@ -92,7 +107,7 @@ namespace Eleven19.Net.Http.Formatting
         {
             public string Filename { get; set; }
             public string DelimiterOverride { get; set; }
-            public CsvConfiguration CsvConfig { get; set; }
+            public CsvConfiguration CsvConfiguration { get; set; }
 
             public override void SetDefaultContentHeaders(Type type, HttpContentHeaders headers, MediaTypeHeaderValue mediaType)
             {
@@ -106,7 +121,7 @@ namespace Eleven19.Net.Http.Formatting
             {
                 using (var writer = new StreamWriter(writeStream))
                 {
-                    var config = CsvConfig ?? new CsvConfiguration();
+                    var config = CsvConfiguration ?? new CsvConfiguration();
                     if (!String.IsNullOrEmpty(DelimiterOverride))
                     {
                         config.Delimiter = DelimiterOverride;

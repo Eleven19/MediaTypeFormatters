@@ -43,6 +43,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CsvMediaTypeFormatter.cs" />
+    <Compile Include="CsvMediaTypeFormatterConfiguration.cs" />
+    <Compile Include="ICsvMediaTypeFormatterConfiguration.cs" />
+    <Compile Include="ICsvMediaTypeFormatterConfigurationExtensions.cs" />
     <Compile Include="Internal\Traverse.cs" />
     <Compile Include="Internal\TypeExtensions.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

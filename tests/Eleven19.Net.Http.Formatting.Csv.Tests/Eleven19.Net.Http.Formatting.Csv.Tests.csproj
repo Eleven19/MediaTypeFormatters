@@ -39,8 +39,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CsvMediaTypeFormatterConfigurationTests.cs" />
     <Compile Include="Internal\TypeExtensionsTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TestObjects\Employee.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\src\Eleven19.Net.Http.Formatting.Csv\Eleven19.Net.Http.Formatting.Csv.csproj">
