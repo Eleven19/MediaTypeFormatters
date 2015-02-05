@@ -16,7 +16,10 @@
     <releaseNotes>@releaseNotes@</releaseNotes>
     <copyright>Copyright 2013</copyright>
     <tags>@tags@</tags>
-    <dependencies />
+    <dependencies>
+      <dependency id="CsvHelper" version="2.10.0" />
+      <dependency id="Microsoft.AspNet.WebApi.Client" version="5.2.2" />
+	  </dependencies>
   </metadata>
   <files>
     <file src="..\deployables\Eleven19.Net.Http.Formatting.Csv\Eleven19.Net.Http.Formatting.Csv.dll" target="lib/net45" />
